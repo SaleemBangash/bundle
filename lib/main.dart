@@ -1,5 +1,8 @@
+import 'package:bundle/AppIntro1.dart';
 import 'package:bundle/Login.dart';
 import 'package:flutter/material.dart';
+
+import 'AppIntro.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: AppIntro(),
     );
   }
 }

@@ -1,4 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names
+import 'package:adobe_xd/page_link.dart';
+import 'package:bundle/Choseloginorcreatenewaccountform.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -42,19 +44,26 @@ class AppIntro2 extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 37.0, end: 34.0),
-            Pin(size: 20.0, end: 31.0),
-            child: Text(
-              'Done',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff2e3645),
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
+              Pin(size: 37.0, end: 34.0), Pin(size: 20.0, end: 31.0),
+              child: PageLink(
+                links: [
+                  PageLinkInfo(
+                    ease: Curves.easeInOut,
+                    duration: 0.6,
+                    pageBuilder: () => Choseloginorcreatenewaccountform(),
+                  ),
+                ],
+                child: Text(
+                  'Done',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xff2e3645),
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              )),
           Pinned.fromPins(
             Pin(start: 26.2, end: 26.2),
             Pin(size: 292.6, middle: 0.3774),

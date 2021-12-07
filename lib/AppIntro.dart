@@ -1,4 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names
+import 'package:adobe_xd/page_link.dart';
+import 'package:bundle/AppIntro1.dart';
+import 'package:bundle/Choseloginorcreatenewaccountform.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,21 +18,37 @@ class AppIntro extends StatelessWidget {
         children: <Widget>[
           Container(),
           Pinned.fromPins(
-            Pin(size: 29.0, start: 25.0),
-            Pin(size: 20.0, end: 30.0),
-            child: Text(
-              'Skip',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff2e3645),
-                fontWeight: FontWeight.w600,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
+              Pin(size: 39.0, start: 25.0), Pin(size: 20.0, end: 30.0),
+              child: PageLink(
+                links: [
+                  PageLinkInfo(
+                    ease: Curves.easeInOut,
+                    duration: 0.6,
+                    pageBuilder: () => Choseloginorcreatenewaccountform(),
+                  ),
+                ],
+                child: Text(
+                  'Skip',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xff2e3645),
+                    fontWeight: FontWeight.w600,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              )),
           Pinned.fromPins(
-            Pin(size: 164.0, middle: 0.5024),
+              Pin(size: 59.0, start: 335.0), Pin(size: 30.0, end: 30.0),
+              child: PageLink(links: [
+                PageLinkInfo(
+                  ease: Curves.easeInOut,
+                  duration: 0.6,
+                  pageBuilder: () => AppIntro1(),
+                ),
+              ], child: Icon(Icons.arrow_forward))),
+          Pinned.fromPins(
+            Pin(size: 194.0, middle: 0.5024),
             Pin(size: 30.0, middle: 0.6531),
             child: Text(
               'Media messages',
