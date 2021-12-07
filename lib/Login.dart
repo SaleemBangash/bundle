@@ -2,6 +2,7 @@
 import 'package:adobe_xd/page_link.dart';
 import 'package:bundle/AppIntro.dart';
 import 'package:bundle/SignUp.dart';
+import 'package:bundle/VerifyCode.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -266,7 +267,7 @@ class Login extends StatelessWidget {
                 PageLinkInfo(
                   ease: Curves.easeInOut,
                   duration: 0.6,
-                  pageBuilder: () => AppIntro(),
+                  pageBuilder: () => VerifyCode(),
                 ),
               ],
               // Adobe XD layer: 'Login' (text)

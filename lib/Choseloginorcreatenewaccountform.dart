@@ -1,4 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names
+import 'package:adobe_xd/page_link.dart';
+import 'package:bundle/Login.dart';
+import 'package:bundle/SignUp.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -116,165 +119,179 @@ class Choseloginorcreatenewaccountform extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 38.0, middle: 0.7515),
-            Pin(size: 20.0, middle: 0.8096),
-            child: Text(
-              'Login',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xff9676ff),
-                fontWeight: FontWeight.w600,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 102.0, start: 51.2),
-            Pin(size: 20.0, middle: 0.8096),
-            child: Text(
-              'Create account',
-              style: TextStyle(
-                fontFamily: 'Segoe UI',
-                fontSize: 15,
-                color: const Color(0xffffffff),
-                fontWeight: FontWeight.w600,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 0.0, end: 0.0),
-            Pin(size: 44.0, start: -8.0),
-            child:
-                // Adobe XD layer: 'Status Bar' (group)
-                Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(start: 0.0, end: 0.0),
-                  child:
-                      // Adobe XD layer: 'Frame' (shape)
-                      Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0x00fcf6f6),
-                    ),
+              Pin(size: 38.0, middle: 0.7515), Pin(size: 20.0, middle: 0.8096),
+              child: PageLink(
+                links: [
+                  PageLinkInfo(
+                    ease: Curves.easeInOut,
+                    duration: 0.6,
+                    pageBuilder: () => Login(),
                   ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 21.0, end: 14.3),
-                  Pin(size: 18.0, middle: 0.5),
-                  child:
-                      // Adobe XD layer: 'Status Bar' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(size: 24.3, end: 0.0),
-                        Pin(size: 11.3, middle: 0.5),
-                        child:
-                            // Adobe XD layer: 'Battery' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromPins(
-                              Pin(start: 0.0, end: 2.3),
-                              Pin(start: 0.0, end: 0.0),
-                              child:
-                                  // Adobe XD layer: 'Border' (shape)
-                                  Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(2.67),
-                                  color: const Color(0x59a0a0a0),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0x59ffffff)),
-                                ),
-                              ),
-                            ),
-                            Pinned.fromPins(
-                              Pin(size: 1.3, end: 0.0),
-                              Pin(size: 4.0, middle: 0.5),
-                              child:
-                                  // Adobe XD layer: 'Cap' (shape)
-                                  SvgPicture.string(
-                                _svg_gvedp,
-                                allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            Pinned.fromPins(
-                              Pin(size: 18.0, start: 2.0),
-                              Pin(start: 2.0, end: 2.0),
-                              child:
-                                  // Adobe XD layer: 'Capacity' (shape)
-                                  Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(1.33),
-                                  color: const Color(0xffa0a0a0),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 15.3, end: 29.3),
-                        Pin(start: 3.3, end: 3.7),
-                        child:
-                            // Adobe XD layer: 'Wifi' (shape)
-                            SvgPicture.string(
-                          _svg_avcany,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 17.0, end: 49.7),
-                        Pin(start: 3.7, end: 3.7),
-                        child:
-                            // Adobe XD layer: 'Cellular Connection' (shape)
-                            SvgPicture.string(
-                          _svg_l8n3uu,
-                          allowDrawingOutsideViewBox: true,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 54.0, start: 0.0),
-                        Pin(start: 0.0, end: 0.0),
-                        child:
-                            // Adobe XD layer: 'Time Style' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromPins(
-                              Pin(start: 0.0, end: 0.0),
-                              Pin(start: 0.0, end: 0.0),
-                              child:
-                                  // Adobe XD layer: 'Time' (text)
-                                  Scrollbar(
-                                child: SingleChildScrollView(
-                                  child: Text(
-                                    '9:41',
-                                    style: TextStyle(
-                                      fontFamily: 'SF Pro Text',
-                                      fontSize: 15,
-                                      color: const Color(0xffa0a0a0),
-                                      letterSpacing: -0.3,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                ],
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xff9676ff),
+                    fontWeight: FontWeight.w600,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-              ],
-            ),
-          ),
+              )),
+          Pinned.fromPins(
+              Pin(size: 122.0, start: 51.2), Pin(size: 20.0, middle: 0.8096),
+              child: PageLink(
+                links: [
+                  PageLinkInfo(
+                    ease: Curves.easeInOut,
+                    duration: 0.6,
+                    pageBuilder: () => SignUp(),
+                  ),
+                ],
+                child: Text(
+                  'Create account',
+                  style: TextStyle(
+                    fontFamily: 'Segoe UI',
+                    fontSize: 15,
+                    color: const Color(0xffffffff),
+                    fontWeight: FontWeight.w600,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              )),
+          // Pinned.fromPins(
+          //   Pin(start: 0.0, end: 0.0),
+          //   Pin(size: 44.0, start: -8.0),
+          //   child:
+          //       // Adobe XD layer: 'Status Bar' (group)
+          //       Stack(
+          //     children: <Widget>[
+          //       Pinned.fromPins(
+          //         Pin(start: 0.0, end: 0.0),
+          //         Pin(start: 0.0, end: 0.0),
+          //         child:
+          //             // Adobe XD layer: 'Frame' (shape)
+          //             Container(
+          //           decoration: BoxDecoration(
+          //             color: const Color(0x00fcf6f6),
+          //           ),
+          //         ),
+          //       ),
+          //       Pinned.fromPins(
+          //         Pin(start: 21.0, end: 14.3),
+          //         Pin(size: 18.0, middle: 0.5),
+          //         child:
+          //             // Adobe XD layer: 'Status Bar' (group)
+          //             Stack(
+          //           children: <Widget>[
+          //             Pinned.fromPins(
+          //               Pin(size: 24.3, end: 0.0),
+          //               Pin(size: 11.3, middle: 0.5),
+          //               child:
+          //                   // Adobe XD layer: 'Battery' (group)
+          //                   Stack(
+          //                 children: <Widget>[
+          //                   Pinned.fromPins(
+          //                     Pin(start: 0.0, end: 2.3),
+          //                     Pin(start: 0.0, end: 0.0),
+          //                     child:
+          //                         // Adobe XD layer: 'Border' (shape)
+          //                         Container(
+          //                       decoration: BoxDecoration(
+          //                         borderRadius: BorderRadius.circular(2.67),
+          //                         color: const Color(0x59a0a0a0),
+          //                         border: Border.all(
+          //                             width: 1.0,
+          //                             color: const Color(0x59ffffff)),
+          //                       ),
+          //                     ),
+          //                   ),
+          //                   Pinned.fromPins(
+          //                     Pin(size: 1.3, end: 0.0),
+          //                     Pin(size: 4.0, middle: 0.5),
+          //                     child:
+          //                         // Adobe XD layer: 'Cap' (shape)
+          //                         SvgPicture.string(
+          //                       _svg_gvedp,
+          //                       allowDrawingOutsideViewBox: true,
+          //                       fit: BoxFit.fill,
+          //                     ),
+          //                   ),
+          //                   Pinned.fromPins(
+          //                     Pin(size: 18.0, start: 2.0),
+          //                     Pin(start: 2.0, end: 2.0),
+          //                     child:
+          //                         // Adobe XD layer: 'Capacity' (shape)
+          //                         Container(
+          //                       decoration: BoxDecoration(
+          //                         borderRadius: BorderRadius.circular(1.33),
+          //                         color: const Color(0xffa0a0a0),
+          //                       ),
+          //                     ),
+          //                   ),
+          //                 ],
+          //               ),
+          //             ),
+          //             Pinned.fromPins(
+          //               Pin(size: 15.3, end: 29.3),
+          //               Pin(start: 3.3, end: 3.7),
+          //               child:
+          //                   // Adobe XD layer: 'Wifi' (shape)
+          //                   SvgPicture.string(
+          //                 _svg_avcany,
+          //                 allowDrawingOutsideViewBox: true,
+          //                 fit: BoxFit.fill,
+          //               ),
+          //             ),
+          //             Pinned.fromPins(
+          //               Pin(size: 17.0, end: 49.7),
+          //               Pin(start: 3.7, end: 3.7),
+          //               child:
+          //                   // Adobe XD layer: 'Cellular Connection' (shape)
+          //                   SvgPicture.string(
+          //                 _svg_l8n3uu,
+          //                 allowDrawingOutsideViewBox: true,
+          //                 fit: BoxFit.fill,
+          //               ),
+          //             ),
+          //             Pinned.fromPins(
+          //               Pin(size: 54.0, start: 0.0),
+          //               Pin(start: 0.0, end: 0.0),
+          //               child:
+          //                   // Adobe XD layer: 'Time Style' (group)
+          //                   Stack(
+          //                 children: <Widget>[
+          //                   Pinned.fromPins(
+          //                     Pin(start: 0.0, end: 0.0),
+          //                     Pin(start: 0.0, end: 0.0),
+          //                     child:
+          //                         // Adobe XD layer: 'Time' (text)
+          //                         Scrollbar(
+          //                       child: SingleChildScrollView(
+          //                         child: Text(
+          //                           '9:41',
+          //                           style: TextStyle(
+          //                             fontFamily: 'SF Pro Text',
+          //                             fontSize: 15,
+          //                             color: const Color(0xffa0a0a0),
+          //                             letterSpacing: -0.3,
+          //                             fontWeight: FontWeight.w600,
+          //                           ),
+          //                           textAlign: TextAlign.center,
+          //                         ),
+          //                       ),
+          //                     ),
+          //                   ),
+          //                 ],
+          //               ),
+          //             ),
+          //           ],
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(size: 131.0, start: 29.2),
             Pin(size: 32.0, middle: 0.6221),
@@ -290,12 +307,12 @@ class Choseloginorcreatenewaccountform extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 89.0, start: 29.2),
+            Pin(size: 99.0, start: 29.2),
             Pin(size: 37.0, middle: 0.67),
             child: Text(
               'Bundle',
               style: TextStyle(
-                fontFamily: 'Script MT',
+                fontFamily: 'italic',
                 fontSize: 30,
                 color: const Color(0xff2e3645),
                 fontWeight: FontWeight.w700,
